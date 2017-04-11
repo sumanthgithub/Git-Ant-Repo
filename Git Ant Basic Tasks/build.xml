@@ -1,0 +1,26 @@
+<?xml version = "1.0"?>
+
+<project name = "Winnova" default = "run">
+
+<target name = "info" >
+<echo> info block executed </echo>
+</target>
+
+<target name = "clean"  depends="info">
+<echo> clean block executed </echo>
+</target>
+
+<target name = "compile"  depends="clean">
+<echo> compile block executed </echo>
+</target>
+
+<target name = "jar" depends="compile">
+<echo> jar block executed </echo>
+</target>
+
+<target name = "run"  depends="jar">
+<echo> run block executed </echo>
+</target>
+
+</project>
+ 

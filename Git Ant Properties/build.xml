@@ -1,0 +1,22 @@
+<?xml version = "1.0"?>
+
+<project name = "Winnova" default = "info">
+
+<target name = "info" >
+
+<echo> info block executed </echo>
+
+<echo> The Ant version is ${ant.version} </echo>
+
+<echo> The full location of my ant file is ${ant.file} </echo>
+
+<echo> The base dir of my ant file is ${basedir} </echo>
+
+<echo> The JDK version used by my ant file is ${ant.java.version} </echo>
+
+<echo> The name of my ant project is ${ant.project.name} </echo>
+
+</target>
+
+</project>
+ 
