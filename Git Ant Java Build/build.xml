@@ -1,0 +1,35 @@
+<?xml version = "1.0"?>
+<project name = "Git Ant Java Code" default = "run" >
+
+<target name = "info" >
+<echo> info block executed </echo>
+</target>
+
+<target name = "clean" depends = "info" >
+<echo> clean block executed </echo>
+</target>
+
+<target name = "compile" depends = "clean" >
+<echo> compile block executed </echo>
+<javac srcdir = "./Git Ant Java Code" destdir = "./Git Ant Java Code"/>
+</target>
+
+<target name = "jar" depends = "compile" >
+<echo> jar block executed </echo>
+<mkdir dir = "./jar" />
+
+<jar destfile = "./jar/Git Ant Java Build.jar" basedir = "./Git Ant Java Code">
+
+<manifest>
+<attribute name = "Main-Class" value = "AntOriginalCode" />
+</manifest>
+</jar>
+</target>
+
+<target name = "run" depends = "jar" >
+<echo> run block executed </echo>
+<java jar="./jar/Git Ant Java Build.jar" fork="true" />
+</target>
+
+
+</project>
